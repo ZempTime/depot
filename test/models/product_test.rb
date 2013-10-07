@@ -17,7 +17,7 @@ class ProductTest < ActiveSupport::TestCase
     assert product.errors[:image_url].any?
   end
 
-  test "product is not valid without a unique title" do
+ test "product is not valid without a unique title" do
     product = Product.new(title:
                           products(:ruby).title,
                           description: "yyy",
